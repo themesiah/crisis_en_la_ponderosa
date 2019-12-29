@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName="SetManager", menuName = "Utils/SetManager", order = 0)]
+[CreateAssetMenu(fileName="SetManager", menuName = "Managers/SetManager", order = 0)]
 public class SetUtils : ScriptableObject
 {
     public void DeactivateAllEnemyShot(RuntimeSetEnemyShot rses)

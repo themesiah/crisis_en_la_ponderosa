@@ -207,7 +207,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -650,6 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4c3f4e9c207f1439810d58644a2746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnEvent: 0
   Event: {fileID: 11400000, guid: 71c88ca1cffa831489db2c95d60e2181, type: 2}
   Response:
     m_PersistentCalls:
@@ -679,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4c3f4e9c207f1439810d58644a2746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnEvent: 0
   Event: {fileID: 11400000, guid: be4d1008b9b6a414f997bad27e2a880f, type: 2}
   Response:
     m_PersistentCalls:
@@ -708,6 +710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4c3f4e9c207f1439810d58644a2746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnEvent: 0
   Event: {fileID: 11400000, guid: de4e6a2779585f94683d6f2b0585cf5f, type: 2}
   Response:
     m_PersistentCalls:

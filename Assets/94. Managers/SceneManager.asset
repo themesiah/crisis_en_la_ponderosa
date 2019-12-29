@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581ada8a0b0020540b0b78462a083e45, type: 3}
-  m_Name: ZoneTime
+  m_Script: {fileID: 11500000, guid: 7f219e1112b09d3418d79418ad74d06c, type: 3}
+  m_Name: SceneManager
   m_EditorClassIdentifier: 
-  Value: 24.78841
-  defaultValue: 45
-  MaxValue: 90
-  MinValue: 0

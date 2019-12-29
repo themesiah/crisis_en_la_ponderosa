@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ScriptableValue<T> : ScriptableObject
+public class ScriptableValue<T> : ScriptableObject where T:System.IEquatable<T>
 {
     [SerializeField]
     protected T Value;
@@ -11,6 +11,8 @@ public class ScriptableValue<T> : ScriptableObject
 
     [SerializeField]
     private T defaultValue;
+
+    private T lastValue;
 
     public void SetValue(T newVal)
     {
@@ -41,9 +43,10 @@ public class ScriptableValue<T> : ScriptableObject
 
     public void InvokeOnValueChange()
     {
-        if (onValueChange != null)
+        if (onValueChange != null && !lastValue.Equals(Value))
         {
             onValueChange(Value);
+            lastValue = Value;
         }
     }
 }

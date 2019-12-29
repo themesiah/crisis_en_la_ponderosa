@@ -49,7 +49,10 @@ public class StressVision : MonoBehaviour
     public void DeactivateStressVision()
     {
         stressIncreaseActive = false;
-        StopCoroutine(stressCoroutine);
+        if (stressCoroutine != null)
+        {
+            StopCoroutine(stressCoroutine);
+        }
     }
 
     public void OnEnable()

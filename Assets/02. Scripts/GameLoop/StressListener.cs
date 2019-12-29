@@ -9,6 +9,8 @@ public class StressListener : MonoBehaviour
     private ScriptableFloat stressReference;
     [SerializeField]
     private PostProcessProfile profile;
+    [SerializeField]
+    private PostProcessingManager postProcessingManager;
 
     StressPP stressSettings = null;
 
@@ -31,10 +33,6 @@ public class StressListener : MonoBehaviour
 
     private void OnStressChanged(float stress)
     {
-        profile.TryGetSettings<StressPP>(out stressSettings);
-        if (stressSettings != null)
-        {
-            stressSettings.blend.value = stress;
-        }
+        postProcessingManager.SetStress(stress);
     }
 }
