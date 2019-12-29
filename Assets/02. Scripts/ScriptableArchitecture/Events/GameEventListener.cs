@@ -3,11 +3,14 @@ using UnityEngine.Events;
 
 public class GameEventListener : MonoBehaviour
 {
-    [Tooltip("Event to register with.")]
-    public GameEvent Event;
+    [SerializeField]
+    private bool destroyOnEvent;
 
-    [Tooltip("Response to invoke when Event is raised.")]
-    public UnityEvent Response;
+    [SerializeField][Tooltip("Event to register with.")]
+    private GameEvent Event;
+
+    [SerializeField][Tooltip("Response to invoke when Event is raised.")]
+    private UnityEvent Response;
 
     private void OnEnable()
     {
@@ -22,5 +25,9 @@ public class GameEventListener : MonoBehaviour
     public void OnEventRaised()
     {
         Response.Invoke();
+        if (destroyOnEvent)
+        {
+            Destroy(this);
+        }
     }
 }

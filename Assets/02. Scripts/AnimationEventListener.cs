@@ -6,10 +6,17 @@ using UnityEngine.Events;
 public class AnimationEventListener : MonoBehaviour
 {
     [SerializeField]
+    private UnityEvent onShotEvent;
+    [SerializeField]
     private UnityEvent onDieEvent;
 
     public void OnDie()
     {
         onDieEvent.Invoke();
+    }
+
+    public void OnShot()
+    {
+        onShotEvent.Invoke();
     }
 }

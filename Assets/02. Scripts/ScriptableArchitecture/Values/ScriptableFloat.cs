@@ -23,4 +23,14 @@ public class ScriptableFloat : ScriptableValue<float>
         }
         InvokeOnValueChange();
     }
+
+    public bool IsMax()
+    {
+        return MaxValue == 0f || Value >= MaxValue;
+    }
+
+    public float GetMax()
+    {
+        return MaxValue;
+    }
 }

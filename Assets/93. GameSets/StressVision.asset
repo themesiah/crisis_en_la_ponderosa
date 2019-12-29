@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581ada8a0b0020540b0b78462a083e45, type: 3}
-  m_Name: ZoneTime
+  m_Script: {fileID: 11500000, guid: b1051971d825a60408651a7b3d5aae5b, type: 3}
+  m_Name: StressVision
   m_EditorClassIdentifier: 
-  Value: 37.29352
-  defaultValue: 90
-  MaxValue: 90
-  MinValue: 0
+  Items: []

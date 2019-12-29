@@ -33,27 +33,11 @@ public class StressVision : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(checkInterval);
-            if (IsInVision())
+            if (RaycastUtils.PlayerIsInVision(enemyHeadPivot))
             {
                 stressReference.IncrementValue(stressPerSecond * checkInterval);
             }
         }
-    }
-
-    private bool IsInVision()
-    {
-        Transform playerHead = VRTK_DeviceFinder.HeadsetTransform();
-        if (playerHead == null)
-        {
-            return false;
-        }
-        RaycastHit hitInfo;
-        Vector3 between = (playerHead.position - enemyHeadPivot.position);
-        if (Physics.Raycast(enemyHeadPivot.position, between.normalized, out hitInfo, between.magnitude)) // If it collides, it's because it doesn't see the player. The player IS NOT a collider.
-        {
-            return false;
-        }
-        return true;
     }
 
     public void ActivateStressVision()

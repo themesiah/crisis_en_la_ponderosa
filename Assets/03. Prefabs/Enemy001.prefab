@@ -1219,6 +1219,9 @@ GameObject:
   - component: {fileID: 146738602997830752}
   - component: {fileID: 5389263235307703748}
   - component: {fileID: 1764538981062477415}
+  - component: {fileID: 787109847383673272}
+  - component: {fileID: 5368318481337002612}
+  - component: {fileID: 7609423329884879693}
   m_Layer: 0
   m_Name: Enemy001
   m_TagString: Untagged
@@ -1291,6 +1294,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 787109847383673272}
+        m_MethodName: StopShooting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!135 &146738602997830752
@@ -1333,10 +1347,110 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHeadPivot: {fileID: 3095542834559904738}
-  stressPerSecond: 0.01
+  stressPerSecond: 0.03
   checkInterval: 0.5
   activateStressIncreaseOnStart: 1
   stressReference: {fileID: 11400000, guid: 157940c2a3ba8f946924232ca0f4400c, type: 2}
+--- !u!114 &787109847383673272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2ab3343bb9e5248821d39e26639482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startShootingOnStart: 1
+  minMaxShotingInterval: {x: 3, y: 5}
+  stressReference: {fileID: 11400000, guid: 157940c2a3ba8f946924232ca0f4400c, type: 2}
+  enemyHeadPivot: {fileID: 3095542834559904738}
+  onStartShot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 328600387698004387}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: shot1
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onShot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1869387665299419126}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 898931e99453cff42b19c85f855d5d40,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8123336383042270155}
+        m_MethodName: RotateCyl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8123336383038349061}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shot1
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  playerLoseEvent: {fileID: 11400000, guid: 21288429563d7174095b2b530cfc144b, type: 2}
+--- !u!114 &5368318481337002612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9996e471e42754cb62b23fca377553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeSet: {fileID: 11400000, guid: 6c0f863aed2a24b4f954ebb389c04f75, type: 2}
+  component: {fileID: 787109847383673272}
+--- !u!114 &7609423329884879693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1836c5840832dd8498c92f56de28132f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeSet: {fileID: 11400000, guid: d8e1085cbc29b1a4199d81cbb8aff06f, type: 2}
+  component: {fileID: 1764538981062477415}
 --- !u!1 &6827212279594401466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,9 +1678,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6844524600538982721}
   - component: {fileID: 328600387698004387}
-  - component: {fileID: 9122640846582221175}
-  - component: {fileID: 6706550803467706596}
-  - component: {fileID: 7778912794209507520}
   - component: {fileID: 245133968494935555}
   m_Layer: 0
   m_Name: Enemy001_Model
@@ -1602,7 +1713,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5434fa1e3e820364d8e3cb4c9fd7dab2, type: 3}
   m_Controller: {fileID: 9100000, guid: 7d8082d76da3b5d4eac62470a5f2cd72, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -1610,62 +1721,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9122640846582221175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8010375713540620437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81cc134596e42f64e86670ba54a4c4af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  onDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 328600387698004387}
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Die1
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!135 &6706550803467706596
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8010375713540620437}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.32
-  m_Center: {x: 0, y: 1.96, z: 0}
---- !u!136 &7778912794209507520
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8010375713540620437}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 1.19
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.17, z: 0}
 --- !u!114 &245133968494935555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,6 +1733,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02bcf368ec02429478987242f124d46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onShotEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 787109847383673272}
+        m_MethodName: OnShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onDieEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1967,9 +2038,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 802aaddcb59d48f46906a22337834a7a, type: 3}
+--- !u!95 &8123336383038349061 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8518280825052232701, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1869387665299419126 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2269117176145808142, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8121356180721144864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8518622789405323480, guid: 802aaddcb59d48f46906a22337834a7a,
     type: 3}
   m_PrefabInstance: {fileID: 471998497537893624}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8123336383042270155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8518280825056139059, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba1eb098b83bdd49af0900e1d4ae815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

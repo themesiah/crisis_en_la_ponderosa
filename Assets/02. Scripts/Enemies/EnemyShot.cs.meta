@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0f2ab3343bb9e5248821d39e26639482
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - stressReference: {fileID: 11400000, guid: 157940c2a3ba8f946924232ca0f4400c, type: 2}
+  - enemyHeadPivot: {instanceID: 0}
+  - playerLoseEvent: {fileID: 11400000, guid: 21288429563d7174095b2b530cfc144b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
