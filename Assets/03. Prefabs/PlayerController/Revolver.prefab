@@ -638,6 +638,9 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   headRadius: 0.12
   pistolRadius: 0.1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1075
 --- !u!114 &6255120102998905798
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 284634772724129197}
   - component: {fileID: 1371650051955209479}
   - component: {fileID: 4015930144740156064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 100576584968586042}
   - component: {fileID: 928646482345333033}
   - component: {fileID: 6798562357695846786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Watch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 5674465537998316}
   - component: {fileID: 573115326928130456}
   - component: {fileID: 6165512420578220642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 870215044323713675}
   - component: {fileID: 311276508531868590}
   - component: {fileID: 4975328288467321191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 7392266298192752982}
   - component: {fileID: 5431444093811483346}
   - component: {fileID: 547888436002781253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886788557690290546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Index_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884305017111677038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Middle_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884474261781266104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Pinkie_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887245248581710050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Ring_5_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887197529198717020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Pinkie_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887217319542697624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Middle_5_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884110788077862040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Pinkie_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 8887140278652611286}
   - component: {fileID: 8837489280425225572}
   - component: {fileID: 8850300420683036040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pinky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887172887774766090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Thumb_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887015074116539346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HandColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886897146563683568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884321560117443152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Index_5_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 8887086529250089648}
   - component: {fileID: 8795955279281383978}
   - component: {fileID: 8853482581312364396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PonderosaHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886980010139161622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Pinkie_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8883948673010652532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Index_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884206306835337370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Middle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1178,7 +1178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8883946164988461390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Ring_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886797776227176206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Thumb_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884314706197856168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Pinkie_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1271,7 +1271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886897044516575418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Thumb_4_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884015810103887268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Middle_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1332,7 +1332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887095226533219946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Middle_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 8884388299882977474}
   - component: {fileID: 8838066673047629490}
   - component: {fileID: 8849844562047548656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Thumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8884028369341205576}
   - component: {fileID: 8837968623829998148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Palm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1477,7 +1477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8883961037698084470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Pinkie_5_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 8886935355656847378}
   - component: {fileID: 8838245283435801860}
   - component: {fileID: 8849814575071940980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 8884197420926342488}
   - component: {fileID: 8838301777007270904}
   - component: {fileID: 8850380192016545204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1645,7 +1645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884147781730943176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Thumb_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1676,7 +1676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884445730539482662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Ring_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1707,7 +1707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8883961787910030302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1738,7 +1738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884212566969803202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Ring_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884458588650569452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Middle_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1800,7 +1800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887082483064394348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Palm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8886775474991229822}
   - component: {fileID: 8900345841583860670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrabAttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1882,7 +1882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887062284335197302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Index_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,7 +1913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884288063575120960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887209990639727048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Ring_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1976,7 +1976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887243172740307786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Index_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2007,7 +2007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884012419565507312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Thumb_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886964447124326662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Ring_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884443534178009928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Wrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2101,7 +2101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8884456292370663796}
   - component: {fileID: 8839637871255364140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_BasicHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,7 +2207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8887188640725915096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: VRTK_Hand_Bone_Index_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2240,7 +2240,7 @@ GameObject:
   - component: {fileID: 8884148040498815804}
   - component: {fileID: 8837339797601114498}
   - component: {fileID: 8850580081352651960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}

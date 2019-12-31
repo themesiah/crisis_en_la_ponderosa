@@ -22,6 +22,8 @@ public class EnemyShot : MonoBehaviour
     private UnityEvent onShot;
     [SerializeField]
     private GameEvent playerLoseEvent;
+    [SerializeField]
+    private LayerMask layerMask;
     
 
     private bool shooting;
@@ -71,7 +73,7 @@ public class EnemyShot : MonoBehaviour
     public void OnShot()
     {
         onShot.Invoke();
-        if (RaycastUtils.PlayerIsInVision(enemyHeadPivot) && stressReference.IsMax())
+        if (RaycastUtils.PlayerIsInVision(enemyHeadPivot, layerMask) && stressReference.IsMax())
         {
             playerLoseEvent.Raise();
         }

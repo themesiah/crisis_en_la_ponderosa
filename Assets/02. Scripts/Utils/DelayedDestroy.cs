@@ -6,10 +6,8 @@ public class DelayedDestroy : MonoBehaviour
 {
     [SerializeField][Tooltip("Default: The attached game object")]
     private GameObject objectToDestroy;
-    [SerializeField]
-    private float timeToDestroy = 1f;
 
-    public void DoDestroy()
+    public void DoDestroy(float timeToDestroy)
     {
         if (objectToDestroy == null)
         {

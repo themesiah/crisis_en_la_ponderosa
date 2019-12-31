@@ -5,7 +5,7 @@ using VRTK;
 
 public class RaycastUtils
 {
-    public static bool PlayerIsInVision(Transform origin)
+    public static bool PlayerIsInVision(Transform origin, LayerMask layerMask)
     {
         Transform playerHead = VRTK_DeviceFinder.HeadsetTransform();
         if (playerHead == null)
@@ -14,7 +14,7 @@ public class RaycastUtils
         }
         RaycastHit hitInfo;
         Vector3 between = (playerHead.position - origin.position);
-        if (Physics.Raycast(origin.position, between.normalized, out hitInfo, between.magnitude)) // If it collides, it's because it doesn't see the player. The player IS NOT a collider.
+        if (Physics.Raycast(origin.position, between.normalized, out hitInfo, between.magnitude, layerMask)) // If it collides, it's because it doesn't see the player. The player IS NOT a collider.
         {
             return false;
         }

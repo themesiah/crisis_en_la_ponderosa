@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1650969114199032555}
   - component: {fileID: 6653988277754865080}
   - component: {fileID: 1041206983084677541}
+  - component: {fileID: 2414270508205633331}
+  - component: {fileID: 5975935827141972693}
   m_Layer: 0
   m_Name: Whiskey
   m_TagString: Untagged
@@ -151,12 +153,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1041206983084677541}
         m_MethodName: DoDestroy
-        m_Mode: 1
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -174,6 +176,17 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: 4d5279e7050d0064ca09f34a55b26e1c, type: 2}
         m_MethodName: Raise
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 214937829302749545}
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -213,7 +226,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 0}
-  timeToDestroy: 1
+--- !u!114 &2414270508205633331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233703529001665863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f0061b72e802440a833b729a144dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsReference: {fileID: 11400000, guid: e9cfbedd1d4bde54eb4e4300d92a7fcc, type: 2}
+  pointsToWin: 10
+--- !u!114 &5975935827141972693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233703529001665863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81cc134596e42f64e86670ba54a4c4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1041206983084677541}
+        m_MethodName: DoDestroy
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2414270508205633331}
+        m_MethodName: WinPoints
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &6233703529001725135
 GameObject:
   m_ObjectHideFlags: 0

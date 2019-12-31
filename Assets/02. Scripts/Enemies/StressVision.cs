@@ -15,6 +15,8 @@ public class StressVision : MonoBehaviour
     private bool activateStressIncreaseOnStart;
     [SerializeField]
     private ScriptableFloat stressReference;
+    [SerializeField]
+    private LayerMask layerMask;
 
     private bool stressIncreaseActive = false;
     private Coroutine stressCoroutine = null;
@@ -33,7 +35,7 @@ public class StressVision : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(checkInterval);
-            if (RaycastUtils.PlayerIsInVision(enemyHeadPivot))
+            if (RaycastUtils.PlayerIsInVision(enemyHeadPivot, layerMask))
             {
                 stressReference.IncrementValue(stressPerSecond * checkInterval);
             }

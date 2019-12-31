@@ -1222,6 +1222,7 @@ GameObject:
   - component: {fileID: 787109847383673272}
   - component: {fileID: 5368318481337002612}
   - component: {fileID: 7609423329884879693}
+  - component: {fileID: 3398801835092046384}
   m_Layer: 0
   m_Name: Enemy001
   m_TagString: Untagged
@@ -1305,6 +1306,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3398801835092046384}
+        m_MethodName: WinPoints
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!135 &146738602997830752
@@ -1351,6 +1363,9 @@ MonoBehaviour:
   checkInterval: 0.5
   activateStressIncreaseOnStart: 1
   stressReference: {fileID: 11400000, guid: 157940c2a3ba8f946924232ca0f4400c, type: 2}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1075
 --- !u!114 &787109847383673272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,6 +1438,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   playerLoseEvent: {fileID: 11400000, guid: 21288429563d7174095b2b530cfc144b, type: 2}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1075
 --- !u!114 &5368318481337002612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1451,6 +1469,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runtimeSet: {fileID: 11400000, guid: d8e1085cbc29b1a4199d81cbb8aff06f, type: 2}
   component: {fileID: 1764538981062477415}
+--- !u!114 &3398801835092046384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f0061b72e802440a833b729a144dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsReference: {fileID: 11400000, guid: e9cfbedd1d4bde54eb4e4300d92a7fcc, type: 2}
+  pointsToWin: 20
 --- !u!1 &6827212279594401466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,18 +2070,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 802aaddcb59d48f46906a22337834a7a, type: 3}
---- !u!95 &8123336383038349061 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8518280825052232701, guid: 802aaddcb59d48f46906a22337834a7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 471998497537893624}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1869387665299419126 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2269117176145808142, guid: 802aaddcb59d48f46906a22337834a7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 471998497537893624}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8121356180721144864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8518622789405323480, guid: 802aaddcb59d48f46906a22337834a7a,
@@ -2068,3 +2088,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba1eb098b83bdd49af0900e1d4ae815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8123336383038349061 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8518280825052232701, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1869387665299419126 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2269117176145808142, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}

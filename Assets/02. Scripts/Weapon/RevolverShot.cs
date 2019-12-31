@@ -24,6 +24,8 @@ public class RevolverShot : MonoBehaviour
     private float headRadius = 0.1f;
     [SerializeField]
     private float pistolRadius = 0.1f;
+    [SerializeField]
+    private LayerMask layerMask;
 
     public void Shot()
     {
@@ -56,11 +58,11 @@ public class RevolverShot : MonoBehaviour
 
     private bool CheckPistolCollision(Transform source)
     {
-        return Physics.CheckSphere(source.position, pistolRadius);
+        return Physics.CheckSphere(source.position, pistolRadius, layerMask);
     }
 
     private bool CheckPlayerColliding()
     {
-        return Physics.CheckSphere(PlayerCollider.instance.transform.position, headRadius);
+        return Physics.CheckSphere(PlayerCollider.instance.transform.position, headRadius, layerMask);
     }
 }
