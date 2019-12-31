@@ -1,0 +1,2 @@
+- Beber solo cuando estás encima de la cabeza en cierto rango x y z
+- Si eres zurdo se deben cambiar los botones de mando

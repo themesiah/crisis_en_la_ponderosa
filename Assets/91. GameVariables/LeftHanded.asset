@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23768708add51d448bd0d6a985ac5939, type: 3}
   m_Name: LeftHanded
   m_EditorClassIdentifier: 
+  Value: 0
   defaultValue: 0

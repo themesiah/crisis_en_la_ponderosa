@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8804120982781780366}
   - component: {fileID: 807527286389025398}
   - component: {fileID: 8264234352799350574}
+  - component: {fileID: 6811746595891538270}
   m_Layer: 0
   m_Name: PlayerHeadFollow
   m_TagString: Untagged
@@ -185,3 +186,34 @@ MonoBehaviour:
   minStressForHeartbeat: 0.5
   minMaxHeartbeatPitch: {x: 1, y: 2}
   heartbeatsPerSecond: 2
+--- !u!114 &6811746595891538270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912117824147552751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4c3f4e9c207f1439810d58644a2746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyOnEvent: 0
+  Event: {fileID: 11400000, guid: 4d5279e7050d0064ca09f34a55b26e1c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 807527286389025398}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: a13823f0e9c9f2d46b6c0c020d4138d6,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

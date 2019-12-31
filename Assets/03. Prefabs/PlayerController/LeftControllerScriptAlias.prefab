@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8561226020823898307}
   - component: {fileID: 8561226020823898304}
+  - component: {fileID: 7220210346117494340}
+  - component: {fileID: 861276207395296110}
+  - component: {fileID: 6601230810761696243}
   m_Layer: 0
   m_Name: LeftControllerScriptAlias
   m_TagString: Untagged
@@ -82,6 +85,52 @@ MonoBehaviour:
   gripSenseAxisChanged: 0
   gripSensePressed: 0
   controllerVisible: 1
+--- !u!114 &7220210346117494340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561226020823898306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cc0a125612f494bbcb4112961d6446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeSingle: {fileID: 11400000, guid: 1b6f84a075b3f034f8caf1e1a9145865, type: 2}
+  component: {fileID: 8561226020823898304}
+--- !u!114 &861276207395296110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561226020823898306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947b27445602ed640b885db7e667dfc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabButton: 7
+  grabPrecognition: 0
+  throwMultiplier: 1
+  createRigidBodyWhenNotTouching: 0
+  controllerAttachPoint: {fileID: 0}
+  controllerEvents: {fileID: 0}
+  interactTouch: {fileID: 0}
+--- !u!114 &6601230810761696243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561226020823898306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e104da36bd3b04b90c6ae969ac66dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customColliderContainer: {fileID: 0}
 --- !u!1001 &8561226019418820811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,11 +142,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VRHandRevolver
-      objectReference: {fileID: 0}
-    - target: {fileID: -2174149805244327505, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6672216428276749182, guid: ab3f61b3075dff544af3fc9990d08ed8,
         type: 3}
@@ -153,6 +197,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227505712443414650, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: mainHandObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 227505712443414650, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: mainHandObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 3917599130359452212}
+    - target: {fileID: 227505712443414650, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: mainHandObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 227505712443414650, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: secondaryHandObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 6814990715551072293}
+    - target: {fileID: 271367778864313903, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: mirrorModel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908234945959530734, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: m_Name
+      value: PonderosaHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652656104591721215, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2174149805244327505, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4684495116666487205, guid: ab3f61b3075dff544af3fc9990d08ed8,
         type: 3}
@@ -219,16 +303,23 @@ PrefabInstance:
       propertyPath: mirrorModel
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 271367778864313903, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: mirrorModel
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3f61b3075dff544af3fc9990d08ed8, type: 3}
 --- !u!4 &3051167620712383413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6672216428276749182, guid: ab3f61b3075dff544af3fc9990d08ed8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8561226019418820811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3917599130359452212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4652656104591721215, guid: ab3f61b3075dff544af3fc9990d08ed8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8561226019418820811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6814990715551072293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2908234945959530734, guid: ab3f61b3075dff544af3fc9990d08ed8,
     type: 3}
   m_PrefabInstance: {fileID: 8561226019418820811}
   m_PrefabAsset: {fileID: 0}

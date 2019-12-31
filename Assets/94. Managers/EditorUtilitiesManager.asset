@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4efdaf887165348941982c23b3a3c2, type: 3}
-  m_Name: SetManager
-  m_EditorClassIdentifier: Assembly-CSharp::SetUtils
+  m_Script: {fileID: 11500000, guid: 363cd85edbae55044ad7881db65b9c06, type: 3}
+  m_Name: EditorUtilitiesManager
+  m_EditorClassIdentifier: 

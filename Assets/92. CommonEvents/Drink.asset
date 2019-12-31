@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf4efdaf887165348941982c23b3a3c2, type: 3}
-  m_Name: SetManager
-  m_EditorClassIdentifier: Assembly-CSharp::SetUtils
+  m_Script: {fileID: 11500000, guid: 72ced06dddede3d46b0e91feb1b9aef1, type: 3}
+  m_Name: Drink
+  m_EditorClassIdentifier: 

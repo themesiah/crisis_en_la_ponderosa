@@ -374,7 +374,6 @@ GameObject:
   - component: {fileID: 870215044323713675}
   - component: {fileID: 311276508531868590}
   - component: {fileID: 4975328288467321191}
-  - component: {fileID: 4635333333919842956}
   m_Layer: 0
   m_Name: Wrist
   m_TagString: Untagged
@@ -441,20 +440,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &4635333333919842956
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5657987643839278133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.50000006
-  m_Height: 1.9999999
-  m_Direction: 1
-  m_Center: {x: 0.000000063329935, y: -1.1641532e-10, z: -0.00000009685754}
 --- !u!1 &6420678931955732176
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +451,6 @@ GameObject:
   - component: {fileID: 7392266298192752982}
   - component: {fileID: 5431444093811483346}
   - component: {fileID: 547888436002781253}
-  - component: {fileID: 9059463677212345120}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -533,20 +517,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &9059463677212345120
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6420678931955732176}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.50000006
-  m_Height: 1.9999999
-  m_Direction: 1
-  m_Center: {x: 0.000000063329935, y: -1.1641532e-10, z: -0.00000009685754}
 --- !u!1 &8881109928451492288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,28 +1034,28 @@ MonoBehaviour:
   touchOverrides:
     ignoreAllOverrides: 1
     stateValue: -1
-    applyThumbOverride: 1
+    applyThumbOverride: 0
     thumbOverride: 0
     applyIndexOverride: 1
-    indexOverride: 0
+    indexOverride: 0.2
     applyMiddleOverride: 1
-    middleOverride: 0
-    applyRingOverride: 1
+    middleOverride: 0.2
+    applyRingOverride: 0
     ringOverride: 0
-    applyPinkyOverride: 1
+    applyPinkyOverride: 0
     pinkyOverride: 0
   grabOverrides:
     ignoreAllOverrides: 1
     stateValue: -1
-    applyThumbOverride: 1
+    applyThumbOverride: 0
     thumbOverride: 0
     applyIndexOverride: 1
-    indexOverride: 0
+    indexOverride: 0.2
     applyMiddleOverride: 1
-    middleOverride: 0
-    applyRingOverride: 1
+    middleOverride: 0.2
+    applyRingOverride: 0
     ringOverride: 0
-    applyPinkyOverride: 1
+    applyPinkyOverride: 0
     pinkyOverride: 0
   useOverrides:
     ignoreAllOverrides: 1

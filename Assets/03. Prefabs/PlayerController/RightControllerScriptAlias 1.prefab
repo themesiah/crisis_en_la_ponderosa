@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1032927176751341327}
   - component: {fileID: 1032927176751341326}
-  - component: {fileID: 5879804205625414367}
-  - component: {fileID: 6694564797053053589}
-  - component: {fileID: 7233259214265816360}
   m_Layer: 0
   m_Name: RightControllerScriptAlias
   m_TagString: Untagged
@@ -85,52 +82,6 @@ MonoBehaviour:
   gripSenseAxisChanged: 0
   gripSensePressed: 0
   controllerVisible: 1
---- !u!114 &5879804205625414367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032927176751341312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10cc0a125612f494bbcb4112961d6446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runtimeSingle: {fileID: 11400000, guid: d1b3863c5d3778a4f9eec1b0393f4edb, type: 2}
-  component: {fileID: 1032927176751341326}
---- !u!114 &6694564797053053589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032927176751341312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 947b27445602ed640b885db7e667dfc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabButton: 7
-  grabPrecognition: 0
-  throwMultiplier: 1
-  createRigidBodyWhenNotTouching: 0
-  controllerAttachPoint: {fileID: 0}
-  controllerEvents: {fileID: 0}
-  interactTouch: {fileID: 0}
---- !u!114 &7233259214265816360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032927176751341312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64e104da36bd3b04b90c6ae969ac66dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customColliderContainer: {fileID: 0}
 --- !u!1001 &1032927176947445835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,6 +93,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VRHandRevolver
+      objectReference: {fileID: 0}
+    - target: {fileID: -2174149805244327505, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6672216428276749182, guid: ab3f61b3075dff544af3fc9990d08ed8,
         type: 3}
@@ -198,39 +154,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6629426478213796378, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 227505712443414650, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: rightHand
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2174149805244327505, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6911521752659829894, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: Event
-      value: 
-      objectReference: {fileID: 11400000, guid: 75186285473019244945c734d00e8e9d,
-        type: 2}
-    - target: {fileID: 7596446844897041657, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: Event
-      value: 
-      objectReference: {fileID: 11400000, guid: c62b02a151f616f43b587916577c2123,
-        type: 2}
-    - target: {fileID: 6948283142780214485, guid: ab3f61b3075dff544af3fc9990d08ed8,
-        type: 3}
-      propertyPath: Event
-      value: 
-      objectReference: {fileID: 11400000, guid: b620d9b82f3b70543901c293aadcda52,
-        type: 2}
     - target: {fileID: 4684495116666487205, guid: ab3f61b3075dff544af3fc9990d08ed8,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -296,6 +219,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6629426478213796378, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 227505712443414650, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: rightHand
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4884855690932666048, guid: ab3f61b3075dff544af3fc9990d08ed8,
         type: 3}
       propertyPath: Event
@@ -327,6 +260,24 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: c62b02a151f616f43b587916577c2123,
         type: 2}
     - target: {fileID: 3979733810240875186, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: 75186285473019244945c734d00e8e9d,
+        type: 2}
+    - target: {fileID: 6948283142780214485, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: b620d9b82f3b70543901c293aadcda52,
+        type: 2}
+    - target: {fileID: 7596446844897041657, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: c62b02a151f616f43b587916577c2123,
+        type: 2}
+    - target: {fileID: 6911521752659829894, guid: ab3f61b3075dff544af3fc9990d08ed8,
         type: 3}
       propertyPath: Event
       value: 
