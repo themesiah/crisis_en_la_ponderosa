@@ -1223,6 +1223,7 @@ GameObject:
   - component: {fileID: 5368318481337002612}
   - component: {fileID: 7609423329884879693}
   - component: {fileID: 3398801835092046384}
+  - component: {fileID: 3684432301750384283}
   m_Layer: 0
   m_Name: Enemy001
   m_TagString: Untagged
@@ -1308,6 +1309,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 3398801835092046384}
         m_MethodName: WinPoints
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3684432301750384283}
+        m_MethodName: Invoke
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1483,6 +1495,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsReference: {fileID: 11400000, guid: e9cfbedd1d4bde54eb4e4300d92a7fcc, type: 2}
   pointsToWin: 20
+--- !u!114 &3684432301750384283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7afae9e7b8e848242874153808db1212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &6827212279594401466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,6 +2105,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 471998497537893624}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1869387665299419126 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2269117176145808142, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8123336383038349061 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8518280825052232701, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8123336383042270155 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8518280825056139059, guid: 802aaddcb59d48f46906a22337834a7a,
@@ -2088,15 +2129,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba1eb098b83bdd49af0900e1d4ae815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &8123336383038349061 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8518280825052232701, guid: 802aaddcb59d48f46906a22337834a7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 471998497537893624}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1869387665299419126 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2269117176145808142, guid: 802aaddcb59d48f46906a22337834a7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 471998497537893624}
-  m_PrefabAsset: {fileID: 0}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ceeac623552ef4b83122d9f75b2718, type: 3}
   m_Name: Points
   m_EditorClassIdentifier: 
-  Value: 90
-  defaultValue: 0
+  Value: 100
+  defaultValue: 100
   MaxValue: 999999

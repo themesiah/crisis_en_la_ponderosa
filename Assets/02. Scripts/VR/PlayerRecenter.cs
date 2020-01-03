@@ -12,7 +12,7 @@ public class PlayerRecenter : MonoBehaviour
     [SerializeField]
     private Transform pivot;
     [SerializeField]
-    private float hardcodedY = 1.65f;
+    private ScriptableFloat heightReference;
 
     private void Start()
     {
@@ -36,7 +36,7 @@ public class PlayerRecenter : MonoBehaviour
             head = VRTK_DeviceFinder.HeadsetTransform();
         }
         Vector3 pos = pivot.position - head.localPosition;
-        pos.y = hardcodedY + pivot.position.y - head.localPosition.y;
+        pos.y = heightReference.GetValue() + pivot.position.y - head.localPosition.y;
         SDKManagerSingle.Get().transform.position = pos;
         Vector3 euler = Vector3.zero;
         euler.y = pivot.rotation.eulerAngles.y;

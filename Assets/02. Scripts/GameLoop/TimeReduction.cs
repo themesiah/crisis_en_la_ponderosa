@@ -11,7 +11,7 @@ public class TimeReduction : MonoBehaviour
     [SerializeField]
     private bool startReducingOnStart;
 
-    private bool currentlyReducing = true;
+    private bool currentlyReducing = false;
 
     void Start()
     {

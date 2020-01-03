@@ -3,7 +3,10 @@ guid: a479a76e96792704083c3e3d5367a5cc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SDKManagerSingle: {fileID: 11400000, guid: da0c94d68f7f92d4fa811499ccd61fd9, type: 2}
+  - pivot: {instanceID: 0}
+  - heightReference: {fileID: 11400000, guid: 9cfbd04d3697b50449a5a934f757de61, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

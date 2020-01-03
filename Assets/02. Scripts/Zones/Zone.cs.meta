@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 50c3ffd234a5a004bb907b48b6292ada
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - startReducing: {fileID: 11400000, guid: dad875fff4f958b4fb441a7741d70226, type: 2}
+  - stopReducing: {fileID: 11400000, guid: 0597bedcc24765c46a7e32d4aa8e1c9d, type: 2}
+  - timeReference: {fileID: 11400000, guid: a4265cd7401338a4085f2a4603b8ce5e, type: 2}
+  - recenter: {instanceID: 0}
+  - pointsReference: {fileID: 11400000, guid: e9cfbedd1d4bde54eb4e4300d92a7fcc, type: 2}
+  - pointsPerSecond: {fileID: 11400000, guid: 6cb6df8efbf966f4fb11f29f6f7833c4, type: 2}
+  - spawner: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

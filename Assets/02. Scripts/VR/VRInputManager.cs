@@ -19,6 +19,8 @@ public class VRInputManager : MonoBehaviour
     [SerializeField]
     private GameEvent leftButton1Event;
     [SerializeField]
+    private GameEvent leftButton1EventKeep;
+    [SerializeField]
     private GameEvent leftButton2Event;
     [SerializeField]
     private GameEvent rightTriggerEvent;
@@ -26,6 +28,8 @@ public class VRInputManager : MonoBehaviour
     private GameEvent rightDownEvent;
     [SerializeField]
     private GameEvent rightButton1Event;
+    [SerializeField]
+    private GameEvent rightButton1EventKeep;
     [SerializeField]
     private GameEvent rightButton2Event;
     
@@ -37,8 +41,18 @@ public class VRInputManager : MonoBehaviour
     [Range(-0.3f, -0.05f)]
     private float uncockMaxAxis;
 
+    [Header("Keep pressing parameters")]
+    [SerializeField]
+    private float timeToTeleport = 1f;
+
     private bool cockingLeft = false;
     private bool cockingRight = false;
+
+    // Keep pressing variables
+    private bool button1leftPressed = false;
+    private float button1leftPressedTime = 0f;
+    private bool button1rightPressed = false;
+    private float button1rightPressedTime = 0f;
 
     private float lastYAxisLeft = 0f;
     private float lastYAxisRight = 0f;
@@ -47,17 +61,19 @@ public class VRInputManager : MonoBehaviour
     {
         if (leftController.Get() != null)
         {
-            leftController.Get().TriggerPressed += ShotLeft;
-            leftController.Get().TouchpadAxisChanged += CockLeft;
-            leftController.Get().ButtonOnePressed += ReloadLeft;
+            leftController.Get().TriggerPressed += TriggerLeft;
+            leftController.Get().TouchpadAxisChanged += StickDownLeft;
+            leftController.Get().ButtonOnePressed += Button1Left;
+            leftController.Get().ButtonOneReleased += Button1LeftRelease;
             leftController.Get().ButtonTwoPressed += Button2Left;
         }
 
         if (rightController != null)
         {
-            rightController.Get().TriggerPressed += ShotRight;
-            rightController.Get().TouchpadAxisChanged += CockRight;
-            rightController.Get().ButtonOnePressed += ReloadRight;
+            rightController.Get().TriggerPressed += TriggerRight;
+            rightController.Get().TouchpadAxisChanged += StickDownRight;
+            rightController.Get().ButtonOnePressed += Button1Right;
+            rightController.Get().ButtonOneReleased += Button1RightRelease;
             rightController.Get().ButtonTwoPressed += Button2Right;
         }
     }
@@ -66,32 +82,76 @@ public class VRInputManager : MonoBehaviour
     {
         if (leftController != null)
         {
-            leftController.Get().TriggerPressed -= ShotLeft;
-            leftController.Get().TouchpadAxisChanged -= CockLeft;
-            leftController.Get().ButtonOnePressed -= ReloadLeft;
+            leftController.Get().TriggerPressed -= TriggerLeft;
+            leftController.Get().TouchpadAxisChanged -= StickDownLeft;
+            leftController.Get().ButtonOnePressed -= Button1Left;
+            leftController.Get().ButtonOneReleased -= Button1LeftRelease;
             leftController.Get().ButtonTwoPressed -= Button2Left;
         }
 
         if (rightController != null)
         {
-            rightController.Get().TriggerPressed -= ShotRight;
-            rightController.Get().TouchpadAxisChanged -= CockRight;
-            rightController.Get().ButtonOnePressed -= ReloadRight;
+            rightController.Get().TriggerPressed -= TriggerRight;
+            rightController.Get().TouchpadAxisChanged -= StickDownRight;
+            rightController.Get().ButtonOnePressed -= Button1Right;
+            rightController.Get().ButtonOneReleased -= Button1RightRelease;
             rightController.Get().ButtonTwoPressed -= Button2Right;
         }
     }
 
-    private void ReloadLeft(object sender, ControllerInteractionEventArgs e)
+    private void Update()
+    {
+        if (button1leftPressed)
+        {
+            button1leftPressedTime += Time.deltaTime;
+            if (button1leftPressedTime >= timeToTeleport)
+            {
+                leftButton1EventKeep.Raise();
+                button1leftPressedTime = 0f;
+                button1leftPressed = false;
+            }
+        } else
+        {
+            button1leftPressedTime = 0f;
+        }
+        if (button1rightPressed)
+        {
+            button1rightPressedTime += Time.deltaTime;
+            if (button1rightPressedTime >= timeToTeleport)
+            {
+                rightButton1EventKeep.Raise();
+                button1rightPressedTime = 0f;
+                button1rightPressed = false;
+            }
+        } else
+        {
+            button1rightPressedTime = 0f;
+        }
+    }
+
+    private void Button1Left(object sender, ControllerInteractionEventArgs e)
     {
         leftButton1Event.Raise();
+        button1leftPressed = true;
     }
 
-    private void ReloadRight(object sender, ControllerInteractionEventArgs e)
+    private void Button1Right(object sender, ControllerInteractionEventArgs e)
     {
         rightButton1Event.Raise();
+        button1rightPressed = true;
     }
 
-    private void CockLeft(object sender, ControllerInteractionEventArgs e)
+    private void Button1LeftRelease(object sender, ControllerInteractionEventArgs e)
+    {
+        button1leftPressed = false;
+    }
+
+    private void Button1RightRelease(object sender, ControllerInteractionEventArgs e)
+    {
+        button1rightPressed = false;
+    }
+
+    private void StickDownLeft(object sender, ControllerInteractionEventArgs e)
     {
         if (e.touchpadAxis.y <= 0f)
         {
@@ -109,7 +169,7 @@ public class VRInputManager : MonoBehaviour
         }
     }
 
-    private void CockRight(object sender, ControllerInteractionEventArgs e)
+    private void StickDownRight(object sender, ControllerInteractionEventArgs e)
     {
         if (e.touchpadAxis.y <= 0f)
         {
@@ -127,12 +187,12 @@ public class VRInputManager : MonoBehaviour
         }
     }
 
-    private void ShotLeft(object sender, ControllerInteractionEventArgs e)
+    private void TriggerLeft(object sender, ControllerInteractionEventArgs e)
     {
         leftTriggerEvent.Raise();
     }
 
-    private void ShotRight(object sender, ControllerInteractionEventArgs e)
+    private void TriggerRight(object sender, ControllerInteractionEventArgs e)
     {
         rightTriggerEvent.Raise();
     }

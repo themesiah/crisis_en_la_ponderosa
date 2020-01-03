@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4283907658470559556}
   - component: {fileID: 4283907658470559563}
-  - component: {fileID: 4283907658470559562}
   - component: {fileID: 4283907658470559561}
   m_Layer: 0
   m_Name: VRInputManager
@@ -50,36 +49,18 @@ MonoBehaviour:
   leftTriggerEvent: {fileID: 11400000, guid: de4e6a2779585f94683d6f2b0585cf5f, type: 2}
   leftDownEvent: {fileID: 11400000, guid: be4d1008b9b6a414f997bad27e2a880f, type: 2}
   leftButton1Event: {fileID: 11400000, guid: 71c88ca1cffa831489db2c95d60e2181, type: 2}
+  leftButton1EventKeep: {fileID: 11400000, guid: a01a22fa10b7d62469e0c0d6ab9e1a33,
+    type: 2}
   leftButton2Event: {fileID: 11400000, guid: 922f1e7ec1937dd45b329e4f322bc62f, type: 2}
   rightTriggerEvent: {fileID: 11400000, guid: 75186285473019244945c734d00e8e9d, type: 2}
   rightDownEvent: {fileID: 11400000, guid: c62b02a151f616f43b587916577c2123, type: 2}
   rightButton1Event: {fileID: 11400000, guid: b620d9b82f3b70543901c293aadcda52, type: 2}
+  rightButton1EventKeep: {fileID: 11400000, guid: 69751fe112da518448eb0df7f959b201,
+    type: 2}
   rightButton2Event: {fileID: 11400000, guid: 937311512d68de4479a787625e0c99e7, type: 2}
   cockMinAxis: 0.8
   uncockMaxAxis: -0.1
---- !u!114 &4283907658470559562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4283907658470559557}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870784a6cec077b4fb6eb05110900712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  activateLine: 0
-  lineMaterial: {fileID: 2100000, guid: 0ff00b6ddefa27848815ebdc03e57b9c, type: 2}
-  distance: 50
-  width: 0.01
-  lineColor: {r: 1, g: 0, b: 0.11128998, a: 1}
-  activateImpactPoint: 0
-  impactPointPrefab: {fileID: 6844609712993772512, guid: 70da7b30601236947b1cdc5ee9a16fbb,
-    type: 3}
+  timeToTeleport: 1
 --- !u!114 &4283907658470559561
 MonoBehaviour:
   m_ObjectHideFlags: 0
