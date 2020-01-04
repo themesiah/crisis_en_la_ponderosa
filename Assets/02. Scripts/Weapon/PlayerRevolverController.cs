@@ -8,12 +8,15 @@ public class PlayerRevolverController : MonoBehaviour
     [SerializeField]
     private UnityEvent onShot;
     [SerializeField]
+    private UnityEvent onFail;
+    [SerializeField]
     private UnityEvent onReload;
     [SerializeField]
     private UnityEvent onCock;
 
     private bool revolverActive;
     private bool reloading = false;
+    private bool canShot = true;
 
     private void OnEnable()
     {
@@ -25,11 +28,19 @@ public class PlayerRevolverController : MonoBehaviour
         revolverActive = false;
     }
 
+    public void SetCanShot(bool can)
+    {
+        canShot = can;
+    }
+
     public void Shot()
     {
-        if (revolverActive && !reloading)
+        if (revolverActive && !reloading && canShot)
         {
             onShot.Invoke();
+        } else if (!canShot)
+        {
+            onFail.Invoke();
         }
     }
 

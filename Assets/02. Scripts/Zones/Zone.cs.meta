@@ -11,6 +11,8 @@ MonoImporter:
   - pointsReference: {fileID: 11400000, guid: e9cfbedd1d4bde54eb4e4300d92a7fcc, type: 2}
   - pointsPerSecond: {fileID: 11400000, guid: 6cb6df8efbf966f4fb11f29f6f7833c4, type: 2}
   - spawner: {instanceID: 0}
+  - zoneActivator: {instanceID: 0}
+  - zoneStartEvent: {fileID: 11400000, guid: 61e35bbf4a79c7f4b9affd94beac53a8, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

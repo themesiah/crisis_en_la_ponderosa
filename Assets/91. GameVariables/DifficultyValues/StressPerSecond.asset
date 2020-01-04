@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d638c3f4210a4293c09dc07e6ab64, type: 3}
+  m_Name: StressPerSecond
+  m_EditorClassIdentifier: 
+  Value: 0
+  defaultValue: 0.15
+  MaxValue: 1
+  MinValue: 0.01
+  listOfValues:
+  - {fileID: 11400000, guid: 7751c182b9ff7144ba9465aee7c520eb, type: 2}
+  - {fileID: 11400000, guid: a4d0718a83bfce6438eb735286833ed6, type: 2}
+  - {fileID: 11400000, guid: d1e1c1304ea666940a1a0bb67c0ce126, type: 2}
+  valueToGetReference: {fileID: 11400000, guid: 872b26692b0e4d242b094d5e682f2a64,
+    type: 2}

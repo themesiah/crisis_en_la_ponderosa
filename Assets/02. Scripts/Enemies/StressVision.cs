@@ -8,7 +8,7 @@ public class StressVision : MonoBehaviour
     [SerializeField]
     private Transform enemyHeadPivot;
     [SerializeField]
-    private float stressPerSecond = 0.01f;
+    private ScriptableFloat stressPerSecondReference;
     [SerializeField] [Tooltip("In seconds")] [Range(0.1f, 1f)]
     private float checkInterval = 0.5f;
     [SerializeField]
@@ -37,15 +37,18 @@ public class StressVision : MonoBehaviour
             yield return new WaitForSeconds(checkInterval);
             if (RaycastUtils.PlayerIsInVision(enemyHeadPivot, layerMask))
             {
-                stressReference.IncrementValue(stressPerSecond * checkInterval);
+                stressReference.IncrementValue(stressPerSecondReference.GetValue() * checkInterval);
             }
         }
     }
 
     public void ActivateStressVision()
     {
-        stressIncreaseActive = true;
-        stressCoroutine = StartCoroutine(StressVisionCoroutine());
+        if (!stressIncreaseActive)
+        {
+            stressIncreaseActive = true;
+            stressCoroutine = StartCoroutine(StressVisionCoroutine());
+        }
     }
 
     public void DeactivateStressVision()
@@ -54,6 +57,7 @@ public class StressVision : MonoBehaviour
         if (stressCoroutine != null)
         {
             StopCoroutine(stressCoroutine);
+            stressCoroutine = null;
         }
     }
 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d638c3f4210a4293c09dc07e6ab64, type: 3}
+  m_Name: ZoneTimeAverage
+  m_EditorClassIdentifier: 
+  Value: 0
+  defaultValue: 0
+  MaxValue: 0
+  MinValue: -999
+  listOfValues:
+  - {fileID: 11400000, guid: f5eee4f13b508b9448576fe21690a5fd, type: 2}
+  - {fileID: 11400000, guid: b73a1fb5247ed9843b82583c0e23bb9e, type: 2}
+  - {fileID: 11400000, guid: 34e27f94bda795c4cadcd41f214cdaeb, type: 2}
+  valueToGetReference: {fileID: 11400000, guid: 872b26692b0e4d242b094d5e682f2a64,
+    type: 2}

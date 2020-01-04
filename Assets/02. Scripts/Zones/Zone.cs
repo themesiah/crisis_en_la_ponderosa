@@ -28,10 +28,12 @@ public class Zone : MonoBehaviour
     private Spawner spawner;
     [SerializeField]
     private ZoneActivator zoneActivator;
+    [SerializeField]
+    private GameEvent zoneStartEvent;
 
     [Header("Parameters")]
     [SerializeField]
-    private float timeAtEnd;
+    private ScriptableFloat timeAtEndReference;
 
     private bool hasStarted = false;
 
@@ -39,6 +41,7 @@ public class Zone : MonoBehaviour
     {
         Recenter();
         startReducing.Raise();
+        zoneStartEvent.Raise();
         onZoneStart.Invoke();
         spawner.SpawnCurrentList();
         if (zoneActivator != null)
@@ -55,7 +58,7 @@ public class Zone : MonoBehaviour
         float restingTime = timeReference.GetValue();
         pointsReference.IncrementValue((int)restingTime * pointsPerSecond.GetValue());
 
-        timeReference.IncrementValue(timeAtEnd);
+        timeReference.IncrementValue(timeAtEndReference.GetValue());
 
         onZoneEnd.Invoke();
         if (zoneActivator != null)

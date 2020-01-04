@@ -34,7 +34,7 @@ public class RevolverShot : MonoBehaviour
             onObstructed.Invoke();
         } else if (ammoReference.GetValue() <= 0)
         {
-            onClick.Invoke();
+            OnClick();
         } else {
             Ray ray = new Ray(bulletSpawnPoint.position, bulletSpawnPoint.forward);
             RaycastHit hit;
@@ -44,17 +44,20 @@ public class RevolverShot : MonoBehaviour
                 GameObject impactPoint = Instantiate(impactPrefab);
                 impactPoint.transform.position = pos;
                 Destroy(impactPoint, 0.1f);
-                Health h = hit.collider.gameObject.GetComponent<Health>();
+                IDamageable h = hit.collider.gameObject.GetComponent<IDamageable>();
                 if (h != null)
                 {
-                    h.Damage(1);
+                    h.ReceiveHit(1);
                 }
             }
             onShot.Invoke();
         }
     }
 
-
+    public void OnClick()
+    {
+        onClick.Invoke();
+    }
 
     private bool CheckPistolCollision(Transform source)
     {

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class ScriptableValue<T> : ScriptableObject where T:System.IEquatable<T>
 {
     [SerializeField]
@@ -10,7 +14,7 @@ public class ScriptableValue<T> : ScriptableObject where T:System.IEquatable<T>
     private UnityAction<T> onValueChange;
 
     [SerializeField]
-    private T defaultValue;
+    protected T defaultValue;
 
     private T lastValue;
 
@@ -20,7 +24,7 @@ public class ScriptableValue<T> : ScriptableObject where T:System.IEquatable<T>
         InvokeOnValueChange();
     }
 
-    public T GetValue()
+    public virtual T GetValue()
     {
         return Value;
     }
@@ -49,4 +53,14 @@ public class ScriptableValue<T> : ScriptableObject where T:System.IEquatable<T>
             lastValue = Value;
         }
     }
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (EditorApplication.isPlaying)
+        {
+            InvokeOnValueChange();
+        }
+    }
+#endif
 }

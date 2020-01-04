@@ -197,6 +197,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8163447258829765140}
+  - component: {fileID: 1925543412536194128}
+  - component: {fileID: 1046239026663997421}
   m_Layer: 0
   m_Name: Bip001 Head
   m_TagString: Untagged
@@ -216,9 +218,50 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5480674216568956966}
+  - {fileID: 3095542834559904738}
   m_Father: {fileID: 225602544845433291}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1925543412536194128
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328759943882756226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.26
+  m_Center: {x: -0.21, y: 0, z: 0}
+--- !u!114 &1046239026663997421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328759943882756226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc5b07974210f94e83a557f1851b9bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2721153503317756572}
+        m_MethodName: Damage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: OnHitEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &1380965887650948032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,21 +1259,22 @@ GameObject:
   m_Component:
   - component: {fileID: 6739183101816654467}
   - component: {fileID: 2721153503317756572}
-  - component: {fileID: 146738602997830752}
-  - component: {fileID: 5389263235307703748}
   - component: {fileID: 1764538981062477415}
   - component: {fileID: 787109847383673272}
   - component: {fileID: 5368318481337002612}
   - component: {fileID: 7609423329884879693}
   - component: {fileID: 3398801835092046384}
   - component: {fileID: 3684432301750384283}
+  - component: {fileID: 589969118420668920}
+  - component: {fileID: 7483322465910852164}
+  - component: {fileID: 4383015259883352597}
   m_Layer: 0
   m_Name: Enemy001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6739183101816654467
 Transform:
   m_ObjectHideFlags: 0
@@ -1240,13 +1284,12 @@ Transform:
   m_GameObject: {fileID: 6739183101816933277}
   m_LocalRotation: {x: -0, y: -0.70115656, z: -0, w: 0.7130074}
   m_LocalPosition: {x: -2.69, y: 46.76, z: 50.95}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 6844524600538982721}
-  - {fileID: 3095542834559904738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -89.04, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 392.56, z: 0}
 --- !u!114 &2721153503317756572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1264,17 +1307,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 328600387698004387}
-        m_MethodName: SetTrigger
-        m_Mode: 5
+        m_MethodName: set_applyRootMotion
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: death
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 146738602997830752}
+      - m_Target: {fileID: 3114067808974632956}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -1285,7 +1328,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5389263235307703748}
+      - m_Target: {fileID: 1925543412536194128}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -1329,35 +1372,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 328600387698004387}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: death
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1764538981062477415}
+        m_MethodName: DeactivateStressVision
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!135 &146738602997830752
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6739183101816933277}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.32
-  m_Center: {x: 0, y: 1.96, z: 0}
---- !u!136 &5389263235307703748
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6739183101816933277}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 1.19
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.17, z: 0}
 --- !u!114 &1764538981062477415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,7 +1409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHeadPivot: {fileID: 3095542834559904738}
-  stressPerSecond: 0.03
+  stressPerSecondReference: {fileID: 11400000, guid: b1da69c8fd4721840a0d7fe3e1f78645,
+    type: 2}
   checkInterval: 0.5
   activateStressIncreaseOnStart: 1
   stressReference: {fileID: 11400000, guid: 157940c2a3ba8f946924232ca0f4400c, type: 2}
@@ -1510,6 +1549,171 @@ MonoBehaviour:
   onDie:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &589969118420668920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081ca0225df25448b20e4d8f327ed9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHeadReference: {fileID: 11400000, guid: da0c94d68f7f92d4fa811499ccd61fd9,
+    type: 2}
+  rotateOnX: 0
+  rotateOnY: 1
+  rotateOnZ: 0
+  rotateOnStart: 1
+  rotationSpeed: 1
+--- !u!114 &7483322465910852164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee88e9eed54c0e24a8c84337c4d0d639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 328600387698004387}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: crouch
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  commonCoverEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 787109847383673272}
+        m_MethodName: StopShooting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7483322465910852164}
+        m_MethodName: DoUncover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1764538981062477415}
+        m_MethodName: DeactivateStressVision
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUncover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7483322465910852164}
+        m_MethodName: DoCover
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 328600387698004387}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: stand
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 787109847383673272}
+        m_MethodName: StartShooting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1764538981062477415}
+        m_MethodName: ActivateStressVision
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  minMaxTimeToUncover: {x: 3, y: 6}
+  minMaxTimeToCover: {x: 4, y: 6}
+  coveredOnStart: 1
+--- !u!114 &4383015259883352597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515e7a8af4af1e944ac445b778fe5c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 328600387698004387}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: stand
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &6827212279594401466
@@ -1660,11 +1864,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7670787792187254986}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.963, z: 0}
+  m_LocalRotation: {x: 0.4999997, y: -0.4999996, z: -0.4999997, w: -0.5000011}
+  m_LocalPosition: {x: -0.25682586, y: 0.03407743, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6739183101816654467}
+  m_Father: {fileID: 8163447258829765140}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7696060425290633495
@@ -1930,6 +2134,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2288689553279374643}
+  - component: {fileID: 3114067808974632956}
+  - component: {fileID: 880392167662110653}
   m_Layer: 0
   m_Name: Bip001 Spine3
   m_TagString: Untagged
@@ -1952,6 +2158,47 @@ Transform:
   m_Father: {fileID: 3866375586718365894}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3114067808974632956
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8676069505788504762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.23
+  m_Height: 0.9
+  m_Direction: 0
+  m_Center: {x: 0.21, y: 0, z: 0}
+--- !u!114 &880392167662110653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8676069505788504762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc5b07974210f94e83a557f1851b9bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2721153503317756572}
+        m_MethodName: Damage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: OnHitEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &8828819136818034878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,12 +2346,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 802aaddcb59d48f46906a22337834a7a, type: 3}
---- !u!4 &8121356180721144864 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8518622789405323480, guid: 802aaddcb59d48f46906a22337834a7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 471998497537893624}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1869387665299419126 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2269117176145808142, guid: 802aaddcb59d48f46906a22337834a7a,
@@ -2129,3 +2370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba1eb098b83bdd49af0900e1d4ae815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8121356180721144864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8518622789405323480, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 807527286389025398}
   - component: {fileID: 8264234352799350574}
   - component: {fileID: 6811746595891538270}
+  - component: {fileID: 376942613690955871}
   m_Layer: 0
   m_Name: PlayerHeadFollow
   m_TagString: Untagged
@@ -217,3 +218,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &376942613690955871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3912117824147552751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24eb41621bd9fdb4c9be675655d40933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeSingle: {fileID: 11400000, guid: 250a1d8f2256d4d4eac30f9e62c983d6, type: 2}
+  component: {fileID: 3912117824147552751}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581ada8a0b0020540b0b78462a083e45, type: 3}
   m_Name: ZoneTime
   m_EditorClassIdentifier: 
-  Value: 78.68042
-  defaultValue: 90
+  Value: 45
+  defaultValue: 45
   MaxValue: 90
   MinValue: 0
