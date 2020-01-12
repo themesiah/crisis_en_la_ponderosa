@@ -12,4 +12,12 @@ public class AudioSource_Wrapper : MonoBehaviour
     {
         source.volume = volumeReference.GetValue();
     }
+
+    public void PlayClip(ScriptableAudioClip audioClip)
+    {
+        AudioClip clip = audioClip.GetClip();
+        float pitch = audioClip.GetPitch();
+        source.pitch = pitch;
+        source.PlayOneShot(clip);
+    }
 }

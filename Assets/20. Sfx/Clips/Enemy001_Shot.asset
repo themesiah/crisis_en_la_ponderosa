@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a9090c14ab59348a6e5cda272eb100, type: 3}
+  m_Name: Enemy001_Shot
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 898931e99453cff42b19c85f855d5d40, type: 3}
+  - {fileID: 8300000, guid: 2ccf7355ffb3e4641980d54a4aa194cf, type: 3}
+  - {fileID: 8300000, guid: 6a45171a6dde40144ac5c87a6baa2b64, type: 3}
+  - {fileID: 8300000, guid: 76b90b43a20abb242a19704beff87f67, type: 3}
+  minMaxPitch: {x: 0.8, y: 1.2}
+  pitchCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

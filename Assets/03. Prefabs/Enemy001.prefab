@@ -231,7 +231,7 @@ SphereCollider:
   m_GameObject: {fileID: 1328759943882756226}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.26
   m_Center: {x: -0.21, y: 0, z: 0}
@@ -1268,6 +1268,10 @@ GameObject:
   - component: {fileID: 589969118420668920}
   - component: {fileID: 7483322465910852164}
   - component: {fileID: 4383015259883352597}
+  - component: {fileID: 1732541889052986775}
+  - component: {fileID: 568949139425626257}
+  - component: {fileID: 1601564664213252659}
+  - component: {fileID: 2569264713659519638}
   m_Layer: 0
   m_Name: Enemy001
   m_TagString: Untagged
@@ -1306,9 +1310,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 328600387698004387}
-        m_MethodName: set_applyRootMotion
-        m_Mode: 6
+      - m_Target: {fileID: 2569264713659519638}
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1373,15 +1377,15 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 328600387698004387}
-        m_MethodName: SetTrigger
-        m_Mode: 5
+        m_MethodName: set_applyRootMotion
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: death
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1764538981062477415}
         m_MethodName: DeactivateStressVision
@@ -1392,6 +1396,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 328600387698004387}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: death
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1411,8 +1426,11 @@ MonoBehaviour:
   enemyHeadPivot: {fileID: 3095542834559904738}
   stressPerSecondReference: {fileID: 11400000, guid: b1da69c8fd4721840a0d7fe3e1f78645,
     type: 2}
+  stressPerTickReference: {fileID: 11400000, guid: f7adc5935bdec3e4db92fec23ab4ad93,
+    type: 2}
   checkInterval: 0.5
-  activateStressIncreaseOnStart: 1
+  stressPerTick: 1
+  activateStressIncreaseOnStart: 0
   stressReference: {fileID: 11400000, guid: 157940c2a3ba8f946924232ca0f4400c, type: 2}
   layerMask:
     serializedVersion: 2
@@ -1430,7 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startShootingOnStart: 1
-  minMaxShotingInterval: {x: 3, y: 5}
+  minMaxShotingInterval: {x: 0.5, y: 3}
   stressReference: {fileID: 11400000, guid: 157940c2a3ba8f946924232ca0f4400c, type: 2}
   enemyHeadPivot: {fileID: 3095542834559904738}
   onStartShot:
@@ -1452,13 +1470,13 @@ MonoBehaviour:
   onShot:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1869387665299419126}
-        m_MethodName: PlayOneShot
+      - m_Target: {fileID: 8878681102974222618}
+        m_MethodName: PlayClip
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 898931e99453cff42b19c85f855d5d40,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 7fdb3405f290592489186fbbf668871d,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: ScriptableAudioClip, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1484,6 +1502,28 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Shot1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1764538981062477415}
+        m_MethodName: StressTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1732541889052986775}
+        m_MethodName: SpawnTrail
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -1673,7 +1713,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1764538981062477415}
-        m_MethodName: ActivateStressVision
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1712,10 +1752,137 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: stand
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1925543412536194128}
+        m_MethodName: set_enabled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 0
+      - m_Target: {fileID: 3114067808974632956}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1925543412536194128}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1732541889052986775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a71a54a765d98949a40c25698895ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trailPrefab: {fileID: 4744074894257616549, guid: bf6f84dd666f9554a96486f16345d547,
+    type: 3}
+  spawnPoint: {fileID: 8118800405393339522}
+  randomFactor: 0.5
+--- !u!95 &568949139425626257
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1601564664213252659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 6adceb0be8b540c40ba5b247ccff6065, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 787109847383673272}
+          m_MethodName: StartShooting
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 589969118420668920}
+          m_MethodName: DoRotate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+--- !u!320 &2569264713659519638
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739183101816933277}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 0}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &6827212279594401466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,7 +2334,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 8676069505788504762}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.23
   m_Height: 0.9
   m_Direction: 0
@@ -2346,9 +2513,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 802aaddcb59d48f46906a22337834a7a, type: 3}
---- !u!82 &1869387665299419126 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2269117176145808142, guid: 802aaddcb59d48f46906a22337834a7a,
+--- !u!4 &8121356180721144864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8518622789405323480, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8878681102974222618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9059986043427825122, guid: 802aaddcb59d48f46906a22337834a7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 471998497537893624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35f32842a770484586d778a5435f205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8118800405393339522 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8513815221243465850, guid: 802aaddcb59d48f46906a22337834a7a,
     type: 3}
   m_PrefabInstance: {fileID: 471998497537893624}
   m_PrefabAsset: {fileID: 0}
@@ -2370,9 +2555,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba1eb098b83bdd49af0900e1d4ae815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &8121356180721144864 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8518622789405323480, guid: 802aaddcb59d48f46906a22337834a7a,
-    type: 3}
-  m_PrefabInstance: {fileID: 471998497537893624}
-  m_PrefabAsset: {fileID: 0}

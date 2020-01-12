@@ -22,6 +22,29 @@ MonoBehaviour:
   color:
     overrideState: 1
     value: {r: 1, g: 0, b: 0, a: 0.44705883}
+--- !u!114 &-6682282987534630776
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682eb318bfd999c47bca614c582c8cba, type: 3}
+  m_Name: ShotEffect
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  blend:
+    overrideState: 1
+    value: 1
+  texture:
+    overrideState: 1
+    value: {fileID: 2800000, guid: 66a01e877f93f8f46ae72f520884e002, type: 3}
+    defaultState: 1
 --- !u!114 &-5498211114719520096
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -112,6 +135,7 @@ MonoBehaviour:
   - {fileID: -5273438763218282423}
   - {fileID: 4972115947765625015}
   - {fileID: -8165160810430495273}
+  - {fileID: -6682282987534630776}
 --- !u!114 &3282105888650642823
 MonoBehaviour:
   m_ObjectHideFlags: 3

@@ -9,8 +9,12 @@ public class StressVision : MonoBehaviour
     private Transform enemyHeadPivot;
     [SerializeField]
     private ScriptableFloat stressPerSecondReference;
+    [SerializeField]
+    private ScriptableFloat stressPerTickReference;
     [SerializeField] [Tooltip("In seconds")] [Range(0.1f, 1f)]
     private float checkInterval = 0.5f;
+    [SerializeField]
+    private bool stressPerTick;
     [SerializeField]
     private bool activateStressIncreaseOnStart;
     [SerializeField]
@@ -35,7 +39,18 @@ public class StressVision : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(checkInterval);
-            if (RaycastUtils.PlayerIsInVision(enemyHeadPivot, layerMask))
+            StressTick();
+        }
+    }
+
+    public void StressTick()
+    {
+        if (RaycastUtils.PlayerIsInVision(enemyHeadPivot, layerMask))
+        {
+            if (stressPerTick)
+            {
+                stressReference.IncrementValue(stressPerTickReference.GetValue());
+            } else
             {
                 stressReference.IncrementValue(stressPerSecondReference.GetValue() * checkInterval);
             }

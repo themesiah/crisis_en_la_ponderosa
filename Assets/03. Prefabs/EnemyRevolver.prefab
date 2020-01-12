@@ -118,6 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8518622789405323480}
   - component: {fileID: 2269117176145808142}
+  - component: {fileID: 9059986043427825122}
   m_Layer: 0
   m_Name: EnemyRevolver
   m_TagString: Untagged
@@ -240,6 +241,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9059986043427825122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516986601088634348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35f32842a770484586d778a5435f205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 2269117176145808142}
 --- !u!1 &8517698334757255984
 GameObject:
   m_ObjectHideFlags: 0
