@@ -20,6 +20,8 @@ public class StressVision : MonoBehaviour
     [SerializeField]
     private ScriptableFloat stressReference;
     [SerializeField]
+    private GenericGameEvent vibrationEvent;
+    [SerializeField]
     private LayerMask layerMask;
 
     private bool stressIncreaseActive = false;
@@ -50,6 +52,7 @@ public class StressVision : MonoBehaviour
             if (stressPerTick)
             {
                 stressReference.IncrementValue(stressPerTickReference.GetValue());
+                vibrationEvent.Raise(transform.position);
             } else
             {
                 stressReference.IncrementValue(stressPerSecondReference.GetValue() * checkInterval);

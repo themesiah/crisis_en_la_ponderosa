@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Lightmaps
+Assets/01.\ Scenes/SaloonTest/*
+*LightingData.asset

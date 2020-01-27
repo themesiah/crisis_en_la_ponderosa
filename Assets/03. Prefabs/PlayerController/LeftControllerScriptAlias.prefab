@@ -703,6 +703,18 @@ PrefabInstance:
       propertyPath: mirrorModel
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3940405389010723806, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: 4cf93901d8af37f49b0e8f3e8519ed4a,
+        type: 2}
+    - target: {fileID: 6278711284008104612, guid: ab3f61b3075dff544af3fc9990d08ed8,
+        type: 3}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: 922f1e7ec1937dd45b329e4f322bc62f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab3f61b3075dff544af3fc9990d08ed8, type: 3}
 --- !u!4 &3051167620712383413 stripped

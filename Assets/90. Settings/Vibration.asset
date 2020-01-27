@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 581ada8a0b0020540b0b78462a083e45, type: 3}
-  m_Name: MusicVolume
+  m_Script: {fileID: 11500000, guid: 23768708add51d448bd0d6a985ac5939, type: 3}
+  m_Name: Vibration
   m_EditorClassIdentifier: 
   Value: 1
-  defaultValue: 1
-  MaxValue: 1
-  MinValue: 0
+  defaultValue: 0

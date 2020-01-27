@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581ada8a0b0020540b0b78462a083e45, type: 3}
   m_Name: StressPerTickEasy
   m_EditorClassIdentifier: 
-  Value: 0.2
+  Value: 0
   defaultValue: 0
   MaxValue: 0
   MinValue: -999

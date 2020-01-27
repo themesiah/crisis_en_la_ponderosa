@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4283907658470559556}
   - component: {fileID: 4283907658470559563}
-  - component: {fileID: 4283907658470559561}
+  - component: {fileID: 8877214224802323488}
+  - component: {fileID: 6351889116463772867}
   m_Layer: 0
   m_Name: VRInputManager
   m_TagString: Untagged
@@ -49,7 +50,7 @@ MonoBehaviour:
   leftTriggerEvent: {fileID: 11400000, guid: de4e6a2779585f94683d6f2b0585cf5f, type: 2}
   leftDownEvent: {fileID: 11400000, guid: be4d1008b9b6a414f997bad27e2a880f, type: 2}
   leftButton1Event: {fileID: 11400000, guid: 71c88ca1cffa831489db2c95d60e2181, type: 2}
-  leftButton1EventKeep: {fileID: 11400000, guid: a01a22fa10b7d62469e0c0d6ab9e1a33,
+  leftButton1EventKeep: {fileID: 11400000, guid: 4cf93901d8af37f49b0e8f3e8519ed4a,
     type: 2}
   leftButton2Event: {fileID: 11400000, guid: 922f1e7ec1937dd45b329e4f322bc62f, type: 2}
   rightTriggerEvent: {fileID: 11400000, guid: 75186285473019244945c734d00e8e9d, type: 2}
@@ -61,7 +62,7 @@ MonoBehaviour:
   cockMinAxis: 0.8
   uncockMaxAxis: -0.1
   timeToTeleport: 1
---- !u!114 &4283907658470559561
+--- !u!114 &8877214224802323488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,17 +71,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 4283907658470559557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa4c3f4e9c207f1439810d58644a2746, type: 3}
+  m_Script: {fileID: 11500000, guid: f9132b87dd17c40489dee90475e4cd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyOnEvent: 0
-  Event: {fileID: 11400000, guid: 922f1e7ec1937dd45b329e4f322bc62f, type: 2}
+  vibrationReference: {fileID: 11400000, guid: 5ad2261e602bdd8468ab1f4c614e4619, type: 2}
+  vibrationClip: {fileID: 8300000, guid: 898931e99453cff42b19c85f855d5d40, type: 3}
+  angleThreshold: 15
+--- !u!114 &6351889116463772867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283907658470559557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6539b20fdb0557540baeee97f729b17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ebf7c5d81e328dd409a361bfe89633b5, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 04b3be29dd050064d811c6c253fd1d10, type: 2}
-        m_MethodName: PlayModeStop
-        m_Mode: 1
+      - m_Target: {fileID: 8877214224802323488}
+        m_MethodName: Vibrate
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -89,5 +104,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+    m_TypeName: GenericGameEventListener+ObjectEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
